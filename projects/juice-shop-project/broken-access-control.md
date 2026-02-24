@@ -1,81 +1,93 @@
-# Broken Access Control Testing — OWASP Juice Shop
+# SQL Injection — Administrator Login Bypass
 
 ## Scenario
-Security testing was performed on a vulnerable web application to identify broken access control vulnerabilities.
+The objective was to gain unauthorized access to the administrator account by testing the login functionality for SQL Injection vulnerabilities.
 
-Access control vulnerabilities occur when an application fails to properly enforce permissions between users.
-
-Testing was performed on OWASP Juice Shop security training platform.
+Testing was performed in a controlled lab environment using OWASP Juice Shop.
 
 ---
 
 ## Objective
-- Identify authorization weaknesses.
-- Attempt unauthorized access to restricted resources.
-- Understand privilege escalation risks.
-
-Training platform: OWASP Security Labs.
+- Identify SQL Injection vulnerability in authentication mechanism.
+- Attempt privilege escalation via login bypass.
+- Demonstrate insecure query handling.
 
 ---
 
 ## Tools Used
-- Browser Developer Tools
-- Burp Suite Proxy (Optional)
-- Application UI Manipulation
-
-Training platform: :contentReference[oaicite:0]{index=0} Juice Shop.
+- Browser
 
 ---
 
-## Methodology
-
-### Step 1 — Reconnaissance
-- Logged into application using normal user account.
-- Explored available user functionalities.
+## Vulnerability Type
+SQL Injection (Authentication Bypass)
 
 ---
 
-### Step 2 — Admin Section Access Testing
-Attempted to access restricted admin pages by modifying URL paths.
+## Exploitation Steps
 
-Example attempts:
-/admin
-/#/admin
-/api/admin
+### Step 1 — Input Injection Payload
 
-Result:
-- Successfully accessed administrative interface without proper authorization validation.
+In the login form:
 
----
+Email: ' OR 1=1;--
 
-### Step 3 — Basket Manipulation Testing
-Tested ability to access other users' shopping baskets.
 
-Observed:
-- Application failed to properly validate user ownership of resources.
+Password:  any value can suffice in this case - "fakepassword" was used
 
-This allowed viewing or modifying other users' data.
 
 ---
 
-### Step 4 — CSRF Testing (Optional Advanced)
-Attempted cross-origin request testing to evaluate session security controls.
+### Step 2 — Authentication Bypass
+
+The application accepted the injected SQL condition.
+
+Because:
+
+- `OR 1=1` always evaluates to TRUE
+- `--` comments out the remaining SQL query
+
+This resulted in the application logging in as the first user in the database (Administrator).
 
 ---
 
-## Impact Analysis
-If exploited in real systems, attackers could:
-- Access sensitive user data.
-- Modify administrative settings.
-- Perform privilege escalation.
-- Manipulate business transactions.
+## Why This Works
+
+The backend query likely resembled: SELECT * FROM users WHERE email = '<user_input>' AND password = '<password>';
+
+After injection, it becomes:
+SELECT * FROM users WHERE email = '' OR 1=1;--' AND password = '';
+
+
+Since `1=1` is always TRUE, authentication is bypassed.
+
+---
+
+## Impact
+
+If exploited in a real-world system, attackers could:
+
+- Gain administrative access
+- Steal user data
+- Modify application settings
+- Escalate privileges
+
+This represents a critical security vulnerability.
 
 ---
 
 ## Remediation Recommendations
-- Implement strict role-based access control (RBAC).
-- Validate user permissions on server side.
-- Protect sensitive endpoints.
-- Apply session validation checks.
+
+- Use parameterized queries (prepared statements)
+- Implement ORM frameworks safely
+- Validate and sanitize user input
+- Apply least privilege database permissions
 
 ---
+
+## Skills Demonstrated
+
+- SQL Injection testing
+- Authentication bypass exploitation
+- Understanding of backend query manipulation
+- Security vulnerability documentation
