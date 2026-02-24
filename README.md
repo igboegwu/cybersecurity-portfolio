@@ -39,7 +39,7 @@ Hands-on practice completed on TryHackMe cybersecurity training platform with pr
 - Application logic abuse
 
 ## Training
-- Completed 39+ practical cybersecurity labs on :contentReference[oaicite:0]{index=0}  
+- Completed 39+ practical cybersecurity labs on TryHackMe and Hack the Box  
 - Ranked Top 20% on TryHackMe Platform
 
 ## Certifications
