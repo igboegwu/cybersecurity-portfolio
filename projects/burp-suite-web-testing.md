@@ -57,7 +57,7 @@ Browser executed injected JavaScript payload.
 
 Successful execution confirmed vulnerability.
 
-Evidence (Add Screenshot Here)
+
 
 Payload request modification.
 
