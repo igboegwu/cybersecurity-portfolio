@@ -1,6 +1,6 @@
 # Ebube Bryan Igboegwu – Cybersecurity Portfolio
 
-## About Me
+## Summary
 Cybersecurity Analyst focused on penetration testing, vulnerability assessment, and offensive security methodologies.
 
 Hands-on practice completed on TryHackMe cybersecurity training platform with practical security labs and real-world security simulations.
@@ -24,11 +24,30 @@ Hands-on practice completed on TryHackMe cybersecurity training platform with pr
 - Burp Suite  
 - Nmap  
 - Wireshark  
-- Metasploit  
+- Metasploit
+
+## Security Focus Areas
+
+### Offensive Security
+- Web application exploitation
+- Authentication testing
+- Session security analysis
+
+### Emerging Security Topics
+- AI prompt injection security
+- Automation security testing
+- Application logic abuse
 
 ## Training
 - Completed 39+ practical cybersecurity labs on :contentReference[oaicite:0]{index=0}  
-- Ranked Top 20% on TryHackMe Platform 
+- Ranked Top 20% on TryHackMe Platform
+
+## Certifications
+
+- ISC2 Certified in Cybersecurity (CC)
+  - Security fundamentals
+  - Risk management concepts
+  - Security operations basics
 
 More projects will be added as I continue learning and practicing offensive security techniques.
 
