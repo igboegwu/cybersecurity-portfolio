@@ -64,30 +64,23 @@ Impact Analysis
 
 If exploited by an attacker, this vulnerability could allow:
 
-Execution of malicious scripts.
+  1. Execution of malicious scripts.
 
-Session cookie theft.
+  2.Session cookie theft.
 
-Phishing attacks.
+  3.Phishing attacks.
 
-Client-side data manipulation.
+  4.Client-side data manipulation.
+
+
 
 Remediation Recommendations
 
-Implement server-side input validation.
+  1. Implement server-side input validation.
 
-Apply output encoding.
+  2. Apply output encoding.
 
-Enforce Content Security Policy (CSP).
+  3. Enforce Content Security Policy (CSP).
 
-Avoid relying only on client-side filtering.
+  4. Avoid relying only on client-side filtering.
 
-Skills Demonstrated
-
-Web application penetration testing
-
-Vulnerability analysis
-
-XSS exploitation techniques
-
-Security reporting and remediation thinking
