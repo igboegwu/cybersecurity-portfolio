@@ -28,7 +28,7 @@ Hands-on practice completed on TryHackMe cybersecurity training platform with pr
 
 ## Training
 - Completed 39+ practical cybersecurity labs on :contentReference[oaicite:0]{index=0}  
-- Ranked Top 20% on platform skill leaderboard  
+- Ranked Top 20% on TryHackMe Platform 
 
 ## Projects
 
@@ -39,5 +39,3 @@ Hands-on practice completed on TryHackMe cybersecurity training platform with pr
 
 More projects will be added as I continue learning and practicing offensive security techniques.
 
-## 📬 Contact
-Add your LinkedIn or professional contact links here.
