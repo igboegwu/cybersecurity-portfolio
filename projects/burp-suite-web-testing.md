@@ -1,41 +1,96 @@
-# Web Application Security Testing Using Burp Suite
+# Web Application Security Testing — Burp Suite & Reflected XSS Exploitation
+
+## Scenario
+A vulnerable web application support ticket form was tested to identify common input validation weaknesses. The objective was to determine whether an attacker could inject malicious scripts into user inputs and execute code in victim browsers through Reflected Cross-Site Scripting (XSS).
+
+---
 
 ## Objective
-Identify and analyze web application vulnerabilities using Burp Suite web proxy tools.
+- Identify web application vulnerabilities.
+- Test input validation mechanisms.
+- Demonstrate exploitation of Reflected XSS vulnerabilities.
+
+---
 
 ## Tools Used
+- TryHackMe Lab Environment  
 - Burp Suite Proxy  
 - Burp Suite Repeater  
 - Burp Suite Intruder  
 
+---
+
 ## Methodology
 
-### 1. Traffic Interception
-Configured browser traffic to pass through Burp Suite proxy.
+### Traffic Interception
+- Configured browser traffic to route through Burp Suite Proxy.
+- Enabled intercept mode to capture HTTP requests between client and server.
 
-Captured HTTP requests between client and server for analysis.
+**Evidence (Add Screenshot Here)**  
+- Burp Proxy interception request.
 
-### 2. Request Manipulation Testing
-Modified request parameters to test for:
-- SQL Injection vulnerabilities  
-- Cross-Site Scripting (XSS)  
-- Authentication bypass logic weaknesses  
+---
 
-### 3. Repeater Testing
-Used Burp Repeater to:
-- Send repeated requests  
-- Analyze server responses  
-- Test input validation logic  
+### Form Submission Testing
+Submitted legitimate data into the support form:
 
-### 4. Intruder Testing
-Automated payload testing against vulnerable input fields.
+Email:pentester@example.thm
 
-## Impact Identified
-- Possible unauthorized data access  
-- Client-side script execution risks  
-- Authentication weaknesses  
 
-## Remediation Recommendations
-- Use parameterized database queries  
-- Implement input validation  
-- Apply Content Security Policy (CSP)
+Captured request using Burp Proxy for modification.
+
+---
+
+### Payload Injection & Filter Bypass
+Modified the email input field with a malicious payload:
+
+```html
+<script>alert("Succ3ssful XSS")</script>
+
+Used URL encoding (Ctrl + U in Burp Suite) to bypass client-side filtering mechanisms.
+
+Exploitation — Reflected XSS
+
+Forwarded modified request to server.
+
+Browser executed injected JavaScript payload.
+
+Successful execution confirmed vulnerability.
+
+Evidence (Add Screenshot Here)
+
+Payload request modification.
+
+XSS execution popup.
+
+Impact Analysis
+
+If exploited by an attacker, this vulnerability could allow:
+
+Execution of malicious scripts.
+
+Session cookie theft.
+
+Phishing attacks.
+
+Client-side data manipulation.
+
+Remediation Recommendations
+
+Implement server-side input validation.
+
+Apply output encoding.
+
+Enforce Content Security Policy (CSP).
+
+Avoid relying only on client-side filtering.
+
+Skills Demonstrated
+
+Web application penetration testing
+
+Vulnerability analysis
+
+XSS exploitation techniques
+
+Security reporting and remediation thinking
