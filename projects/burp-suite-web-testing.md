@@ -26,9 +26,6 @@ A vulnerable web application support ticket form was tested to identify common i
 - Configured browser traffic to route through Burp Suite Proxy.
 - Enabled intercept mode to capture HTTP requests between client and server.
 
-**Evidence (Add Screenshot Here)**  
-- Burp Proxy interception request.
-
 ---
 
 ### Form Submission Testing
