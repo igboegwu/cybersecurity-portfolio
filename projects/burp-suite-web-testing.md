@@ -54,11 +54,12 @@ Browser executed injected JavaScript payload.
 
 Successful execution confirmed vulnerability.
 
-
-
 Payload request modification.
 
 XSS execution popup.
+
+
+
 
 Impact Analysis
 
