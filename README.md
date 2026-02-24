@@ -30,12 +30,5 @@ Hands-on practice completed on TryHackMe cybersecurity training platform with pr
 - Completed 39+ practical cybersecurity labs on :contentReference[oaicite:0]{index=0}  
 - Ranked Top 20% on TryHackMe Platform 
 
-## Projects
-
-### 1. Burp Suite Web Application Security Testing
-- Intercepted and modified HTTP requests using Burp Suite proxy.
-- Tested for injection vulnerabilities and authentication weaknesses.
-- Performed request-response analysis using Repeater and Intruder.
-
 More projects will be added as I continue learning and practicing offensive security techniques.
 
