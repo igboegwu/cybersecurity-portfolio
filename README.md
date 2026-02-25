@@ -51,7 +51,7 @@ Hands-on practice completed on TryHackMe cybersecurity training platform with pr
  
 ##  International Security Systems Collaboration
 
-### Technical Administrator / Security Solutions Liaison  
+#### Technical Administrator / Security Solutions Liaison  
 **Partnership with SoftGuard**
 
 Collaborated with international security technology partner **SoftGuard** to gain exposure to enterprise-grade security management solutions.
@@ -69,9 +69,11 @@ Collaborated with international security technology partner **SoftGuard** to gai
 - Enterprise deployment models
 - Infrastructure integration planning
 
----
+
 
 *This collaboration enhanced my understanding of real-world security operations environments and enterprise-level security system deployments.*
+
+---
 
 More projects will be added as I continue learning and practicing offensive security techniques.
 
